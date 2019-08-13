@@ -19,13 +19,21 @@ This will be assumed to be in addition to and independent of pathway/ontology an
 ## Steps to be carried out in the main approach:
 
 For each gene set, retrieve one or more tables of statistical characterizations, including at least (but not necessarily limited to)
+
 a. Transcript length
+
 b. CDS length
+
 c. Number of exons
+
 d. 5’UTR length
+
 e. 3’UTR length
+
 f. Codon Adaptation Index (if available)
+
 g. Known interacting partners (perhaps from String)
+
 h. Known regulatory interactions (e.g., validated or putative TF binding sites)
 Visualize in an appropriate manner (box plots, violin plots, etc) the various sets, and
 Apply appropriate statistical tests on the equality/consistency of the values within each variable
