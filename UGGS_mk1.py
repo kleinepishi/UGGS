@@ -13,3 +13,4 @@ df = pd.read_excel('jesse_data.xlsx', sheet_name='Sheet1')
 # display column headings
 print("Column headings:")
 print(df.columns)
+
