@@ -6,6 +6,7 @@
 import pandas as pd
 from pandas import ExcelFile
 from pandas import ExcelWriter
+import matplotlib.pyplot as plt
 from intermine.webservice import Service
 import numpy as np
 
@@ -57,7 +58,7 @@ def load(df):
     print(df.columns)
 load(df)
 
-# print out all genes where value is > 0
+# print out all gene_id's where value is > 0
 def threshold():
     thresh_df = df[['gene_id',
         '531 genes where translation is promoted by GLH-1 (-.2 difference, see old table for details)',
@@ -70,3 +71,4 @@ def threshold():
         (thresh_df['97 genes where translation is promoted by GLH-1 (-.5 difference, see old table for details)'] > 0) &
         (thresh_df['99 genes where translation is inhibited by GLH-1 (.5 difference, see old table for details)'] > 0)]
     print(thresh_val())
+
