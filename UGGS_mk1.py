@@ -59,6 +59,7 @@ def load(df):
 load(df)
 
 # print out all gene_id's where value is > 0
+# unneeded, safe to remove
 def threshold():
     thresh_df = df[['gene_id',
         '531 genes where translation is promoted by GLH-1 (-.2 difference, see old table for details)',
@@ -87,10 +88,6 @@ def ana_threshold():
     #print(gene_thresh)
     #thresh_group_531 = group_531[group_531.iloc[:, [0]] >= 1]
     #print(thresh_group_531)
-
-    for column, row in ana_df.iterrows():
-        print(row)
-
 ana_threshold()
 
 # load in dataset to use for analysis selection
@@ -101,7 +98,7 @@ def master_dict():
     ref_df = pd.DataFrame(df)
     # use [:,3] to load column 3 of the dataframe
     ref_gene_id = ref_df.iloc[:,3]
-    #print(ref_gene_id)
+    print(ref_gene_id)
     #print(ref_df)
 master_dict()
 
