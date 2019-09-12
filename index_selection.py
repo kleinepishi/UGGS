@@ -13,7 +13,4 @@ def index():
     df_filter = df.filter(like='WBGene')
     print(df_filter)
 index()
-
-# select rows from dataframe where 'WBGene*' is present
-def selection():
     
