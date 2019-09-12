@@ -9,6 +9,7 @@ from pandas import ExcelWriter
 import matplotlib.pyplot as plt
 from intermine.webservice import Service
 import numpy as np
+import argparse
 
 # wormmine parameter query
 def wmquery():
@@ -79,4 +80,11 @@ def csv_to_dict():
     print(ref_gene_id)
     #print(ref_df)
 csv_to_dict()
+
+parser = argparse.ArgumentParser(description='allow for user input of master gene filepath')
+parser.add_argument('filename')
+args = parser.parse_args()
+with open(args.filename) as file:
+    df = pd.DataFrame(file)
+    print(df)
 
